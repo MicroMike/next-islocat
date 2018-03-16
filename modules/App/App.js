@@ -1,38 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
+import Link from 'next/link'
+import fetch from 'isomorphic-unfetch'
 
-// Import Style
-import styles from './App.css';
+import { switchLanguage } from '../modules/Intl/IntlActions'
 
-// Import Components
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-
-// Import Actions
-import { switchLanguage } from '../../modules/Intl/IntlActions';
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 export class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isMounted: false };
-  }
-
-  componentDidMount() {
-    this.setState({ isMounted: true }); // eslint-disable-line
-  }
-
   toggleAddPostSection = () => {
     this.props.dispatch(toggleAddPost());
   };
 
   render() {
-    const rtl = this.props.intl.locale === 'he' ? styles.rtl : '';
+    const rtl = this.props.intl && this.props.intl.locale === 'he' ? styles.rtl : '';
 
     return (
       <div>
         {/* {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />} */}
         <div className={rtl}>
-          {/* <Helmet
+          <Helmet
             title="MERN Starter - Blog App"
             titleTemplate="%s - Blog App"
             meta={[
@@ -46,12 +34,13 @@ export class App extends Component {
                 content: 'width=device-width, initial-scale=1',
               },
             ]}
-          /> */}
+          />
           <Header
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
             intl={this.props.intl}
+            toggleAddPost={this.toggleAddPostSection}
           />
-          <div className={styles.container}>
+          <div className="container">
             {this.props.children}
           </div>
           <Footer />
@@ -61,17 +50,15 @@ export class App extends Component {
   }
 }
 
-App.propTypes = {
-  children: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
-};
+App.getInitialProps = async function () {
+  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+  const data = await res.json()
 
-// Retrieve data from store as props
-function mapStateToProps(store) {
+  console.log(`Show data fetched. Count: ${data.length}`)
+
   return {
-    intl: store.intl,
-  };
+    shows: data
+  }
 }
 
-export default connect(mapStateToProps)(App);
+export default App
