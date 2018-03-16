@@ -1,4 +1,4 @@
-import { enabledLanguages, localizationData } from '../../../Intl/setup';
+import { enabledLanguages, localizationData } from './setup';
 import { SWITCH_LANGUAGE } from './IntlActions';
 
 const initLocale = global.navigator && global.navigator.language || 'en';
@@ -12,7 +12,7 @@ const initialState = {
 const IntlReducer = (state = initialState, action) => {
   switch (action.type) {
     case SWITCH_LANGUAGE: {
-      const { type, ...actionWithoutType } = action; // eslint-disable-line
+      const { type, ...actionWithoutType } = action;
       return { ...state, ...actionWithoutType };
     }
 
