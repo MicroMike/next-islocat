@@ -26,7 +26,6 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^0.1.4",
-    "next-images": "^0.9.2",
     "babel-core": "^6.9.1",
     "cross-env": "^1.0.8",
     "express": "^4.16.3",
@@ -35,6 +34,7 @@
     "isomorphic-unfetch": "^2.0.0",
     "mongoose": "^5.0.10",
     "next": "^5.0.0",
+    "next-images": "^0.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",

@@ -1,51 +1,14 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import IntlWrapper from '../Intl/IntlWrapper'
-import { configureStore } from '../store';
+import { FormattedMessage } from 'react-intl';
 
 import { switchLanguage } from '../Intl/IntlActions'
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-
-const Html = (props) => {
-  const rtl = props.intl && props.intl.locale === 'he' ? styles.rtl : '';
-
-  return (
-    <div>
-      {/* {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />} */}
-      <div className={rtl}>
-        <Helmet
-          title="MERN Starter - Blog App"
-          titleTemplate="%s - Blog App"
-          meta={[
-            { charset: 'utf-8' },
-            {
-              'http-equiv': 'X-UA-Compatible',
-              content: 'IE=edge',
-            },
-            {
-              name: 'viewport',
-              content: 'width=device-width, initial-scale=1',
-            },
-          ]}
-        />
-        <Header
-          switchLanguage={lang => props.dispatch(switchLanguage(lang))}
-          intl={props.intl}
-          // toggleAddPost={toggleAddPostSection}
-        />
-        <div className="container">
-          {props.children}
-        </div>
-        <Footer />
-      </div>
-    </div>
-  );
-}
 
 export class App extends Component {
   toggleAddPostSection = () => {
@@ -53,14 +16,40 @@ export class App extends Component {
   };
 
   render() {
-    const store = configureStore({});
+    console.log(this.props)
+    const rtl = this.props.intl && this.props.intl.locale === 'he' ? styles.rtl : '';
     return (
-      <Provider store={store}>
-        <IntlWrapper >
-          <Html />
-        </IntlWrapper>
-      </Provider>
-    )
+      <div>
+        {/* {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />} */}
+        <div className={rtl}>
+          <Helmet
+            title="MERN Starter - Blog App"
+            titleTemplate="%s - Blog App"
+            meta={[
+              { charset: 'utf-8' },
+              {
+                'http-equiv': 'X-UA-Compatible',
+                content: 'IE=edge',
+              },
+              {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1',
+              },
+            ]}
+          />
+          <link rel="stylesheet" href="/_next/static/style.css" />
+          <Header
+            switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
+            intl={this.props.intl}
+          // toggleAddPost={toggleAddPostSection}
+          />
+          <div className="container">
+            {this.props.children}
+          </div>
+          <Footer />
+        </div>
+      </div >
+    );
   }
 }
 
@@ -75,4 +64,10 @@ App.getInitialProps = async function () {
   }
 }
 
-export default App
+function mapStateToProps(store) {
+  return {
+    intl: store.intl,
+  };
+}
+
+export default connect(mapStateToProps)(App)

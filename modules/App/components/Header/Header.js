@@ -7,28 +7,28 @@ import Link from 'next/link'
 import styles from './Header.css';
 
 export function Header(props, context) {
-  // const languageNodes = props.intl.enabledLanguages.map(
-  //   lang => <li key={lang} onClick={() => props.switchLanguage(lang)} className={lang === props.intl.locale ? styles.selected : ''}>{lang}</li>
-  // );
+  const languageNodes = props.intl.enabledLanguages.map(
+    lang => <li key={lang} onClick={() => props.switchLanguage(lang)} className={lang === props.intl.locale ? styles.selected : ''}>{lang}</li>
+  );
 
   return (
     <div className={styles.header}>
       <div className={styles['language-switcher']}>
         <ul>
           <li><FormattedMessage id="switchLanguage" /></li>
-          {/* {languageNodes} */}
+          {languageNodes}
         </ul>
       </div>
       <div className={styles.content}>
         <h1 className={styles['site-title']}>
-          <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
+          <Link href="/" ><FormattedMessage id="siteTitle" /></Link>
         </h1>
         <div className={styles['user-type']}>
           <h2>
-            <Link to="/owner"><FormattedMessage id="owner" /></Link>
+            <Link href="/owner"><FormattedMessage id="owner" /></Link>
           </h2>
           <h2>
-            <Link to="/resident"><FormattedMessage id="resident" /></Link>
+            <Link href="/resident"><FormattedMessage id="resident" /></Link>
           </h2>
         </div>
         {/*
@@ -41,14 +41,14 @@ export function Header(props, context) {
   );
 }
 
-Header.contextTypes = {
-  router: PropTypes.object,
-};
+// Header.contextTypes = {
+//   router: PropTypes.object,
+// };
 
-Header.propTypes = {
-  toggleAddPost: PropTypes.func.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
-};
+// Header.propTypes = {
+//   toggleAddPost: PropTypes.func.isRequired,
+//   switchLanguage: PropTypes.func.isRequired,
+//   intl: PropTypes.object.isRequired,
+// };
 
 export default Header;
