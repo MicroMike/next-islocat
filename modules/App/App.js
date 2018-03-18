@@ -16,7 +16,6 @@ export class App extends Component {
   };
 
   render() {
-    console.log(this.props)
     const rtl = this.props.intl && this.props.intl.locale === 'he' ? styles.rtl : '';
     return (
       <div>
@@ -43,10 +42,15 @@ export class App extends Component {
             intl={this.props.intl}
           // toggleAddPost={toggleAddPostSection}
           />
+          {console.log(this.props)}
           <div className="container">
             {this.props.children}
           </div>
           <Footer />
+          <script rel="text/javascript" src="/_next/-/manifest.js" ></script>
+          <script rel="text/javascript" src="/_next/commons.js" ></script>
+          <script rel="text/javascript" src="/_next/main.js" ></script>
+          <script rel="text/javascript" src="/_next/-/index.js" ></script>
         </div>
       </div >
     );
