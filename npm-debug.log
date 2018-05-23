@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Users\\massoune\\Documents\\NodeJSPortable\\App\\NodeJS\\node.exe',
+1 verbose cli   'C:\\Users\\massoune\\Documents\\NodeJSPortable\\Data\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'slimerjs',
+1 verbose cli   '-g' ]
+2 info using npm@3.5.3
+3 info using node@v5.7.0
+4 verbose stack Error: Failed to replace env in config: ${PAL:DataDir}
+4 verbose stack     at C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:417:13
+4 verbose stack     at String.replace (native)
+4 verbose stack     at envReplace (C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:413:12)
+4 verbose stack     at parseField (C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:391:7)
+4 verbose stack     at C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:334:17
+4 verbose stack     at Array.forEach (native)
+4 verbose stack     at Conf.add (C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:333:23)
+4 verbose stack     at ConfigChain.addString (C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\node_modules\config-chain\index.js:244:8)
+4 verbose stack     at Conf.<anonymous> (C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\lib\config\core.js:321:10)
+4 verbose stack     at C:\Users\massoune\Documents\NodeJSPortable\Data\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:76:16
+5 verbose cwd C:\Users\massoune\workspace\headless
+6 error Windows_NT 6.3.9600
+7 error argv "C:\\Users\\massoune\\Documents\\NodeJSPortable\\App\\NodeJS\\node.exe" "C:\\Users\\massoune\\Documents\\NodeJSPortable\\Data\\node_modules\\npm\\bin\\npm-cli.js" "install" "slimerjs" "-g"
+8 error node v5.7.0
+9 error npm  v3.5.3
+10 error Failed to replace env in config: ${PAL:DataDir}
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
