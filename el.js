@@ -6,7 +6,7 @@ const nightmare = Nightmare({
   //   mode: 'detach'
   // },
   waitTimeout: 3600000,
-  show: true,
+  show: false,
   typeInterval: 300,
   webPreferences: {
     webSecurity: false,
@@ -60,7 +60,9 @@ var artists = [
 
 var interval = 600000
 
-const doItAgain = async () => {
+const doItAgain = async (first) => {
+  console.log(first ? 'start' : 'change')
+
   await nightmare
     .goto('https://open.spotify.com/' + artists[getRandomInt(artists.length - 1, 0)])
     .forward()
@@ -146,10 +148,9 @@ const create = async () => {
     .exitIFrame()
     .wait(5000)
 
-  doItAgain()
+  doItAgain(true)
 
   await setInterval(async () => {
-    console.log('change')
     doItAgain()
   }, interval);
 
