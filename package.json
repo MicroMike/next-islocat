@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron": "https://github.com/castlabs/electron-releases.git#v1.8.7-vmp1010",
     "nightmare": "^3.0.1",
     "nightmare-iframe-manager": "0.0.4",
     "nightmare-window-manager": "^0.2.2"
