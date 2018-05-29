@@ -6,7 +6,7 @@ const nightmare = Nightmare({
   //   mode: 'detach'
   // },
   waitTimeout: 3600000,
-  show: true,
+  show: false,
   typeInterval: 300,
   webPreferences: {
     webSecurity: false,
@@ -92,8 +92,7 @@ const doItAgain = (first) => {
 
 const tempmail = [
   'https://www.mohmal.com/fr/create/random',
-  'https://www.mohmal.com/fr/create/random',
-  // 'https://www.tempmailaddress.com'
+  'https://www.tempmailaddress.com'
   // 'https://www.crazymailing.com',
 ]
 
@@ -119,7 +118,7 @@ const create = async (newAccount) => {
         }, emailurl)
       : emails[getRandomInt(emails.length - 1, 0)]
 
-    console.log(tempmail)
+    console.log('load: ' + tempmail)
 
     nightmare
       .goto(url(newAccount))
@@ -211,19 +210,6 @@ const create = async (newAccount) => {
 
       }, newAccount)
 
-    // const recaptcha = await nightmare
-    //   .wait('#tokenMicro')
-    //   .evaluate(() => {
-    //     return $('#tokenMicro').text()
-    //   })
-
-    // console.log(recaptcha)
-
-    // nightmare
-    // .evaluate((recaptcha) => {
-    //   document.getElementById('g-recaptcha-response').value = recaptcha
-    // }, recaptcha)
-
     if (newAccount) {
       nightmare
         .type('form input[name="email"]', tempmail)
@@ -245,6 +231,8 @@ const create = async (newAccount) => {
       .wait('#tokenMicro')
       .click(newAccount ? '#register-button-email-submit' : '#login-button')
       .wait('.welcome-message')
+
+    console.log('account created: ' + tempmail)
 
     if (newAccount) {
       nightmare
@@ -309,9 +297,9 @@ const create = async (newAccount) => {
 
 }
 
-// setTimeout(() => {
-create(true)
-// }, getRandomInt(120000));
+setTimeout(() => {
+  create(true)
+}, getRandomInt(120000));
 
 // setInterval(() => {
 //   create(true)
