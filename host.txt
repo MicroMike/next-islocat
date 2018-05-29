@@ -1,0 +1,25 @@
+myWindowsHosting.com
+Base de connaissances
+Assistance
+MICROMIKE
+hostings
+Domaine
+Add-Ons
+Filiale
+Facturations
+Paramètres
+Assistance
+Balance: $0
+ Confirmer New Hosting Account Info
+      Compte d'hébergement ID：	micromike-001
+      Première Site Nom du dossier racine：	site1
+      Première Type de site Web：	ASP.NET
+      Plan d'hébergement Nom：	W60-EU
+      	
+      	S'il vous plaît noter les informations suivantes FTP Infomation:
+      Adresse FTP ：	FTP-EU.SITE4NOW.NET
+      Nom d’utilisateur FTP ：	micromike-001
+      Mot de passe FTP ：	(même que votre mot de passe du panneau de contrôle)
+      Annuaire FTP	\
+      	
+ 	    

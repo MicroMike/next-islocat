@@ -7,6 +7,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "show": "cross-env SHOW=true node el.js",
     "timeout": "node el.js",
     "start5": "concurrently \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\"",
     "start": "concurrently \"npm run start5\" \"npm run start5\"",

@@ -1,0 +1,142 @@
+
+> headless@1.0.0 start C:\Users\massoune\workspace\headless\next-islocat
+> concurrently "npm run start5" "npm run start5"
+
+[0] 
+[0] > headless@1.0.0 start5 C:\Users\massoune\workspace\headless\next-islocat
+[0] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] 
+[1] 
+[1] > headless@1.0.0 start5 C:\Users\massoune\workspace\headless\next-islocat
+[1] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] 
+[1] [0] 
+[1] [0] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[1] [0] > node el.js
+[1] [0] 
+[1] [3] 
+[1] [3] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[1] [3] > node el.js
+[1] [3] 
+[1] [1] 
+[1] [1] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[1] [1] > node el.js
+[1] [1] 
+[0] [3] 
+[0] [3] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[0] [3] > node el.js
+[0] [3] 
+[0] [2] 
+[0] [2] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[0] [2] > node el.js
+[0] [2] 
+[1] [4] 
+[1] [4] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[1] [4] > node el.js
+[1] [4] 
+[0] [0] 
+[0] [0] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[0] [0] > node el.js
+[0] [0] 
+[1] [2] 
+[1] [2] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[1] [2] > node el.js
+[1] [2] 
+[0] [4] 
+[0] [4] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[0] [4] > node el.js
+[0] [4] 
+[0] [1] 
+[0] [1] > headless@1.0.0 timeout C:\Users\massoune\workspace\headless\next-islocat
+[0] [1] > node el.js
+[0] [1] 
+[1] [3] lycan.chaz@0live.org
+[1] [4] khade.jewel@0live.org
+[1] [0] mayco.sonnie@0live.org
+[0] [0] davarius.reef@0live.org
+[0] [2] kunga.kelby@0live.org
+[0] [4] xzavian.kael@0live.org
+[0] [1] nash.kristofer@0live.org
+[0] [3] belal.khang@0live.org
+[1] [1] keontre.toki@0live.org
+[1] [2] jontrell.darcy@0live.org
+[0] [0] (node:5288) UnhandledPromiseRejectionWarning: Error: navigation error
+[0] [0]     at unserializeError (C:\Users\massoune\workspace\headless\next-islocat\node_modules\nightmare\lib\ipc.js:162:13)
+[0] [0]     at EventEmitter.<anonymous> (C:\Users\massoune\workspace\headless\next-islocat\node_modules\nightmare\lib\ipc.js:89:13)
+[0] [0]     at Object.onceWrapper (events.js:275:13)
+[0] [0]     at EventEmitter.emit (events.js:182:13)
+[0] [0]     at ChildProcess.<anonymous> (C:\Users\massoune\workspace\headless\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[0] [0]     at ChildProcess.emit (events.js:182:13)
+[0] [0]     at emit (internal/child_process.js:797:12)
+[0] [0]     at process._tickCallback (internal/process/next_tick.js:174:19)
+[0] [0] (node:5288) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[0] [0] (node:5288) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[0] [2] start
+[0] [2] undefined
+[1] [4] start
+[1] [4] undefined
+[1] [0] start
+[1] [0] undefined
+[1] [1] start
+[1] [1] undefined
+[0] [3] start
+[0] [3] undefined
+[1] [3] start
+[1] [3] undefined
+[0] [4] start
+[0] [4] undefined
+[0] [1] start
+[0] [1] undefined
+[1] [2] start
+[1] [2] undefined
+[0] [4] change
+[1] [2] change
+[0] [3] change
+[1] [1] change
+[0] [2] change
+[1] [0] change
+[1] [3] change
+[1] [4] change
+[0] [4] change
+[1] [2] change
+[0] [3] change
+[0] [1] change
+[1] [1] change
+[0] [4] change
+[1] [2] change
+[0] [2] change
+[1] [0] change
+[1] [3] change
+[0] [3] change
+[1] [1] change
+[1] [4] change
+[0] [4] change
+[1] [2] change
+[0] [3] change
+[0] [1] change
+[1] [1] change
+[0] [2] change
+[1] [0] change
+[0] [4] change
+[1] [3] change
+[1] [2] change
+[0] [3] change
+[1] [4] change
+[0] [4] change
+[1] [1] change
+[1] [2] change
+[0] [2] change
+[0] [3] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [1] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ÿ? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? npm run timeout exited with code 1
+[0] npm run timeout exited with code 1
+[0] [1] npm run timeout exited with code 1
+[0] [0] npm run timeout exited with code 1
+[1] [0] change
+
+[0] [2] npm run timeout exited with code 1
+[3] npm run timeout exited with code 1
+[1] [3] npm run timeout exited with code 1
+[1] [0] npm run timeout exited with code 1
+[1] [1] npm run timeout exited with code 1
+[1] [4] npm run timeout exited with code 1
+[0] npm run start5 exited with code 1
+[1] npm run start5 exited with code 1
