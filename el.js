@@ -92,7 +92,9 @@ const doItAgain = (first) => {
 
 const tempmail = [
   'https://www.mohmal.com/fr/create/random',
-  'https://www.tempmailaddress.com'
+  'https://www.mohmal.com/fr/create/random',
+  'https://www.tempmailaddress.com',
+  'https://www.tempmailaddress.com',
   // 'https://www.crazymailing.com',
 ]
 
@@ -227,12 +229,12 @@ const create = async (newAccount) => {
         .type('form input[name="password"]', tempmail)
     }
 
-    nightmare
+    await nightmare
       .wait('#tokenMicro')
       .click(newAccount ? '#register-button-email-submit' : '#login-button')
       .wait('.welcome-message')
 
-    console.log('account created: ' + tempmail)
+    await console.log('account created: ' + tempmail)
 
     if (newAccount) {
       nightmare
