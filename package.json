@@ -17,9 +17,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax-request": "^1.2.3",
+    "electron": "https://github.com/castlabs/electron-releases.git#v1.8.7-vmp1010",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.11.0",
     "nightmare": "^3.0.1",
-    "nightmare-iframe-manager": "0.0.4",
-    "electron": "https://github.com/castlabs/electron-releases.git#v1.8.7-vmp1010"
+    "nightmare-iframe-manager": "0.0.4"
   },
   "devDependencies": {
     "concurrently": "^3.5.1"

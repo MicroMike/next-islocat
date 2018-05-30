@@ -6,7 +6,7 @@ const nightmare = Nightmare({
   //   mode: 'detach'
   // },
   waitTimeout: 3600000,
-  show: false,
+  show: true,
   typeInterval: 300,
   webPreferences: {
     webSecurity: false,
@@ -15,6 +15,7 @@ const nightmare = Nightmare({
     experimentalFeatures: true
   }
 })
+var request = require('ajax-request');
 // var iframe = require('nightmare-iframe');
 
 var countries = [
@@ -53,7 +54,7 @@ var emails = [
 ]
 
 function getRandomInt(max, min) {
-  return Math.floor(Math.random() * Math.floor(max) + (min ? min : 1));
+  return Math.floor(Math.random() * Math.floor(max) + (typeof min !== 'undefined' ? min : 1));
 }
 
 var month = getRandomInt(12)
@@ -81,7 +82,7 @@ const doItAgain = (first) => {
   console.log(first ? 'start' : 'change')
 
   nightmare
-    .goto('https://open.spotify.com/' + artists[getRandomInt(artists.length - 1, 0)])
+    .goto('https://open.spotify.com/' + artists[getRandomInt(artists.length, 0)])
     .wait(3000)
     .forward()
     // .click('.artist-header .btn.btn-black')
@@ -91,23 +92,20 @@ const doItAgain = (first) => {
 }
 
 const tempmail = [
-  'https://www.mohmal.com/fr/create/random',
-  'https://www.mohmal.com/fr/create/random',
   'https://www.tempmailaddress.com',
   'https://www.tempmailaddress.com',
+  // 'https://www.mohmal.com/fr/create/random',
   // 'https://www.crazymailing.com',
 ]
 
-var emailurl = tempmail[getRandomInt(tempmail.length - 1, 0)]
+var emailurl = tempmail[getRandomInt(tempmail.length, 0)]
 
-const create = async (newAccount) => {
+const create = async (newAccount, captcha) => {
   try {
-    nightmare
-      .goto(emailurl)
-      .wait(2000)
-
     const tempmail = newAccount
       ? await nightmare
+        .goto(emailurl)
+        .wait(2000)
         .evaluate((emailurl) => {
           switch (emailurl) {
             case 'https://www.mohmal.com/fr/create/random':
@@ -118,99 +116,17 @@ const create = async (newAccount) => {
               return document.getElementById('email').innerText
           }
         }, emailurl)
-      : emails[getRandomInt(emails.length - 1, 0)]
+      : emails[getRandomInt(emails.length, 0)]
 
     console.log('load: ' + tempmail)
 
     nightmare
       .goto(url(newAccount))
       .forward()
-
-    nightmare
-      .evaluate((newAccount) => {
-        // jQuery.noConflict();
-
-        const anticaptcha = () => {
-          $.ajax({
-            url: 'https://api.anti-captcha.com/createTask',
-            method: 'POST',
-            dataType: 'json',
-            data: JSON.stringify({
-              clientKey: '2e7376e717a0ea614d93d6f921238352',
-              task: {
-                type: 'NoCaptchaTaskProxyless',
-                websiteKey: newAccount ? $('[data-sitekey]').attr('data-sitekey') : '6LeIZkQUAAAAANoHuYD1qz5bV_ANGCJ7n7OAW3mo',
-                websiteURL: newAccount ? 'https://spotify.com/fr/signup' : 'https://accounts.spotify.com/fr/login',
-              }
-            })
-          })
-            .done(function (response) {
-              console.log(response)
-              $('body').append('<div>' + response + '<div>')
-
-              const interval = setInterval(() => {
-                $.ajax({
-                  url: 'https://api.anti-captcha.com/getTaskResult',
-                  method: 'POST',
-                  dataType: 'json',
-                  data: JSON.stringify({
-                    clientKey: '2e7376e717a0ea614d93d6f921238352',
-                    taskId: response.taskId
-                  })
-                })
-                  .done(function (response) {
-                    console.log(response)
-                    if (response.status !== 'processing') {
-                      clearInterval(interval)
-                      document.getElementById('g-recaptcha-response').value = response.solution.gRecaptchaResponse
-                      $('body').append('<div id="tokenMicro" >' + response.solution.gRecaptchaResponse + '<div>')
-                    }
-                  });
-              }, 10000)
-            }, 5000);
-        }
-
-        const twocaptcha = () => {
-          $.ajax({
-            url: 'http://2captcha.com/in.php',
-            method: 'POST',
-            data: {
-              key: '964a5072a7fdea86b877739dc4ea4788',
-              method: 'userrecaptcha',
-              googlekey: newAccount ? '6LdaGwcTAAAAAJfb0xQdr3FqU4ZzfAc_QZvIPby5' : '6LeIZkQUAAAAANoHuYD1qz5bV_ANGCJ7n7OAW3mo',
-              pageurl: newAccount ? 'https://spotify.com/fr/signup' : 'https://accounts.spotify.com/fr/login',
-            }
-          })
-            .done(function (response) {
-              console.log(response)
-              $('body').append('<div>' + response + '<div>')
-
-              const interval = setInterval(() => {
-                $.ajax({
-                  url: 'http://2captcha.com/res.php',
-                  method: 'POST',
-                  data: {
-                    key: '964a5072a7fdea86b877739dc4ea4788',
-                    action: 'get',
-                    id: response.split('|')[1]
-                  }
-                })
-                  .done(function (response) {
-                    console.log(response)
-                    if (response !== 'CAPCHA_NOT_READY') {
-                      clearInterval(interval)
-                      document.getElementById('g-recaptcha-response').value = response.split('|')[1]
-                      $('body').append('<div id="tokenMicro" >' + response + '<div>')
-                    }
-                  });
-              }, 10000)
-            }, 5000);
-        }
-
-        // anticaptcha()
-        twocaptcha()
-
-      }, newAccount)
+      .evaluate((captcha) => {
+        console.log(captcha)
+        document.getElementById('g-recaptcha-response').value = captcha
+      }, captcha)
 
     if (newAccount) {
       nightmare
@@ -230,32 +146,33 @@ const create = async (newAccount) => {
     }
 
     await nightmare
-      .wait('#tokenMicro')
       .click(newAccount ? '#register-button-email-submit' : '#login-button')
+      .wait(10000)
       .wait('.welcome-message')
 
-    await console.log('account created: ' + tempmail)
+    await console.log((newAccount ? 'account created: ' : 'account logged: ') + tempmail)
 
     if (newAccount) {
-      nightmare
+      await nightmare
         .goto(emailurl)
         .forward()
 
       if (emailurl === 'https://www.mohmal.com/fr/create/random') {
-        await nightmare
+        var urlclick = await nightmare
+          .wait(5000)
           .evaluate(() => {
             var id = $('[data-msg-id]').attr('data-msg-id')
-            window.location = 'https://www.mohmal.com/fr/message/' + id
+            return 'https://www.mohmal.com/fr/message/' + id
           })
+
         var urlactivate = await nightmare
+          .goto(urlclick)
           .forward()
           .wait('.call-to-action-button')
           .evaluate(() => {
-            console.log(document.getElementsByClassName('call-to-action-button')[0])
             return document.getElementsByClassName('call-to-action-button')[0].href;
           })
       }
-      // case 'https://www.crazymailing.com':
       if (emailurl === 'https://www.tempmailaddress.com') {
         var urlactivate = await nightmare
           .wait('#schranka tr.hidden-md[data-href="2"]')
@@ -265,18 +182,17 @@ const create = async (newAccount) => {
           .forward()
           .wait('.call-to-action-button')
           .evaluate(() => {
-            console.log(document.getElementsByClassName('call-to-action-button')[0])
             return document.getElementsByClassName('call-to-action-button')[0].href;
           })
       }
 
-      nightmare
+      await nightmare
         .goto(urlactivate)
         .forward()
         .wait(5000)
     }
 
-    doItAgain(true)
+    // doItAgain(true)
   }
   catch (e) {
     console.log(e)
@@ -299,11 +215,89 @@ const create = async (newAccount) => {
 
 }
 
-setTimeout(() => {
-  create(true)
-}, getRandomInt(120000));
+// setTimeout(() => {
+//   create(true)
+// }, getRandomInt(120000));
 
 // setInterval(() => {
 //   create(true)
 //   // create(yn70)
 // }, intervalHours)
+
+var newAccount = true
+
+const twocaptcha = () => {
+  request.post({
+    url: 'http://2captcha.com/in.php',
+    data: {
+      key: '964a5072a7fdea86b877739dc4ea4788',
+      method: 'userrecaptcha',
+      googlekey: newAccount ? '6LdaGwcTAAAAAJfb0xQdr3FqU4ZzfAc_QZvIPby5' : '6LeIZkQUAAAAANoHuYD1qz5bV_ANGCJ7n7OAW3mo',
+      pageurl: newAccount ? 'https://spotify.com/fr/signup' : 'https://accounts.spotify.com/fr/login',
+    }
+  }, function (err, res, body) {
+    console.log(body)
+
+    const interval = setInterval(() => {
+      request({
+        url: 'http://2captcha.com/res.php',
+        method: 'GET',
+        data: {
+          key: '964a5072a7fdea86b877739dc4ea4788',
+          action: 'get',
+          id: body.split('|')[1]
+        }
+      }, function (err, res, body) {
+
+        if (body !== 'CAPCHA_NOT_READY') {
+          clearInterval(interval)
+          create(newAccount, body.split('|')[1])
+        }
+        else {
+          console.log(body.split('|')[0])
+        }
+      });
+    }, 10000)
+  })
+}
+
+const anticaptcha = () => {
+  request({
+    url: 'https://api.anti-captcha.com/createTask',
+    method: 'POST',
+    json: true,
+    data: {
+      clientKey: '5cf44dee27fed739df49a69bb4494b9a',
+      task: {
+        type: 'NoCaptchaTaskProxyless',
+        websiteKey: newAccount ? '6LdaGwcTAAAAAJfb0xQdr3FqU4ZzfAc_QZvIPby5' : '6LeIZkQUAAAAANoHuYD1qz5bV_ANGCJ7n7OAW3mo',
+        websiteURL: newAccount ? 'https://spotify.com/fr/signup' : 'https://accounts.spotify.com/fr/login',
+      }
+    }
+  }, function (err, res, response) {
+    console.log(response)
+
+    const interval = setInterval(() => {
+      request({
+        url: 'https://api.anti-captcha.com/getTaskResult',
+        method: 'POST',
+        json: true,
+        data: {
+          clientKey: '5cf44dee27fed739df49a69bb4494b9a',
+          taskId: response.taskId
+        }
+      }, function (err, res, response) {
+        if (response.status !== 'processing') {
+          clearInterval(interval)
+          create(newAccount, response.solution.gRecaptchaResponse)
+        }
+        else {
+          console.log(response)
+        }
+      });
+    }, 10000)
+  });
+}
+
+anticaptcha();
+// create(true)
