@@ -1,0 +1,472 @@
+
+> headless@1.0.0 start C:\Users\Mike\workspace\next-islocat
+> concurrently "npm run start25" "npm run start25"
+
+[0] 
+[0] > headless@1.0.0 start25 C:\Users\Mike\workspace\next-islocat
+[0] > concurrently "npm run start5" "npm run start5" "npm run start5" "npm run start5" "npm run start5"
+[0] 
+[1] 
+[1] > headless@1.0.0 start25 C:\Users\Mike\workspace\next-islocat
+[1] > concurrently "npm run start5" "npm run start5" "npm run start5" "npm run start5" "npm run start5"
+[1] 
+[1] [1] 
+[1] [1] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[1] [1] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] [1] 
+[0] [0] 
+[0] [0] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[0] [0] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] [0] 
+[1] [0] 
+[1] [0] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[1] [0] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] [0] 
+[0] [1] 
+[0] [1] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[0] [1] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] [1] 
+[0] [2] 
+[0] [2] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[0] [2] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] [2] 
+[0] [4] 
+[0] [4] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[0] [4] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] [4] 
+[0] [3] 
+[0] [3] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[0] [3] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[0] [3] 
+[1] [2] 
+[1] [2] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[1] [2] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] [2] 
+[1] [4] 
+[1] [4] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[1] [4] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] [4] 
+[1] [3] 
+[1] [3] > headless@1.0.0 start5 C:\Users\Mike\workspace\next-islocat
+[1] [3] > concurrently "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout" "npm run timeout"
+[1] [3] 
+[1] [1] [0] 
+[1] [1] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [1] [0] > node el.js
+[1] [1] [0] 
+[0] [0] [1] 
+[0] [0] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [0] [1] > node el.js
+[0] [0] [1] 
+[0] [0] [0] 
+[0] [0] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [0] [0] > node el.js
+[0] [0] [0] 
+[1] [1] [2] 
+[1] [1] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [1] [2] > node el.js
+[1] [1] [2] 
+[1] [1] [4] 
+[1] [1] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [1] [4] > node el.js
+[1] [1] [4] 
+[1] [0] [0] 
+[1] [0] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [0] [0] > node el.js
+[1] [0] [0] 
+[0] [0] [3] 
+[0] [0] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [0] [3] > node el.js
+[0] [0] [3] 
+[0] [2] [3] 
+[0] [2] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [2] [3] > node el.js
+[0] [2] [3] 
+[1] [0] [1] 
+[1] [0] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [0] [1] > node el.js
+[1] [0] [1] 
+[1] [1] [1] 
+[1] [1] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [1] [1] > node el.js
+[1] [1] [1] 
+[0] [0] [2] 
+[0] [0] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [0] [2] > node el.js
+[0] [0] [2] 
+[1] [1] [3] 
+[1] [1] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [1] [3] > node el.js
+[1] [1] [3] 
+[1] [0] [2] 
+[1] [0] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [0] [2] > node el.js
+[1] [0] [2] 
+[1] [0] [4] 
+[1] [0] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [0] [4] > node el.js
+[1] [0] [4] 
+[1] [0] [3] 
+[1] [0] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [0] [3] > node el.js
+[1] [0] [3] 
+[0] [0] [4] 
+[0] [0] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [0] [4] > node el.js
+[0] [0] [4] 
+[0] [1] [1] 
+[0] [1] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [1] [1] > node el.js
+[0] [1] [1] 
+[0] [1] [0] 
+[0] [1] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [1] [0] > node el.js
+[0] [1] [0] 
+[0] [4] [4] 
+[0] [4] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [4] [4] > node el.js
+[0] [4] [4] 
+[0] [2] [2] 
+[0] [2] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [2] [2] > node el.js
+[0] [2] [2] 
+[0] [4] [3] 
+[0] [4] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [4] [3] > node el.js
+[0] [4] [3] 
+[0] [2] [0] 
+[0] [2] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [2] [0] > node el.js
+[0] [2] [0] 
+[0] [4] [2] 
+[0] [4] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [4] [2] > node el.js
+[0] [4] [2] 
+[0] [2] [4] 
+[0] [2] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [2] [4] > node el.js
+[0] [2] [4] 
+[0] [1] [4] 
+[0] [1] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [1] [4] > node el.js
+[0] [1] [4] 
+[1] [3] [4] 
+[1] [3] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [3] [4] > node el.js
+[1] [3] [4] 
+[0] [4] [1] 
+[0] [4] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [4] [1] > node el.js
+[0] [4] [1] 
+[0] [3] [4] 
+[0] [3] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [3] [4] > node el.js
+[0] [3] [4] 
+[1] [4] [4] 
+[1] [4] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [4] [4] > node el.js
+[1] [4] [4] 
+[0] [4] [0] 
+[0] [4] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [4] [0] > node el.js
+[0] [4] [0] 
+[0] [3] [0] 
+[0] [3] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [3] [0] > node el.js
+[0] [3] [0] 
+[0] [2] [1] 
+[0] [2] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [2] [1] > node el.js
+[0] [2] [1] 
+[0] [1] [3] 
+[0] [1] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [1] [3] > node el.js
+[0] [1] [3] 
+[1] [3] [3] 
+[1] [3] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [3] [3] > node el.js
+[1] [3] [3] 
+[0] [1] [2] 
+[0] [1] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [1] [2] > node el.js
+[0] [1] [2] 
+[1] [4] [2] 
+[1] [4] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [4] [2] > node el.js
+[1] [4] [2] 
+[0] [3] [3] 
+[0] [3] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [3] [3] > node el.js
+[0] [3] [3] 
+[1] [4] [3] 
+[1] [4] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [4] [3] > node el.js
+[1] [4] [3] 
+[1] [3] [1] 
+[1] [3] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [3] [1] > node el.js
+[1] [3] [1] 
+[0] [3] [2] 
+[0] [3] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [3] [2] > node el.js
+[0] [3] [2] 
+[1] [3] [2] 
+[1] [3] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [3] [2] > node el.js
+[1] [3] [2] 
+[1] [2] [3] 
+[1] [2] [3] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [2] [3] > node el.js
+[1] [2] [3] 
+[1] [2] [1] 
+[1] [2] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [2] [1] > node el.js
+[1] [2] [1] 
+[1] [2] [4] 
+[1] [2] [4] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [2] [4] > node el.js
+[1] [2] [4] 
+[1] [4] [1] 
+[1] [4] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [4] [1] > node el.js
+[1] [4] [1] 
+[1] [2] [3] [1] 
+[0] [3] [1] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[0] [3] [1] > node el.js
+[0] [3] [1] 
+[1] [2] 
+[1] [2] [2] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [2] [2] > node el.js
+[1] [2] [2] 
+[1] [2] [0] 
+[1] [2] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [2] [0] > node el.js
+[1] [2] [0] 
+[1] [3] [0] 
+[1] [3] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [3] [0] > node el.js
+[1] [3] [0] 
+[1] [4] [0] 
+[1] [4] [0] > headless@1.0.0 timeout C:\Users\Mike\workspace\next-islocat
+[1] [4] [0] > node el.js
+[1] [4] [0] 
+[0] [4] [1] load: gemini.danarius@ldaho.net
+[1] [0] [1] load: diamond.alexey@ldaho.net
+[0] [3] [2] load: tywon.devion@ldaho.net
+[0] [3] [3] load: briceson.josemanuel@ldaho.net
+[1] [3] [3] load: kostas.joshuan@ldaho.net
+[0] [0] [4] load: ded89972@emailna.co
+[1] [4] [1] load: quavon.izaiah@ldaho.net
+[0] [1] [2] load: clifton.zadiel@ldaho.net
+[0] [0] [3] load: f62da89c@emailna.co
+[1] [3] [0] load: caedon.kyel@ldaho.net
+[0] [0] [2] load: daryel.srihith@ldaho.net
+[0] [2] [2] load: martavion.russel@ldaho.net
+[1] [4] [4] load: 4d75caa8@emailna.co
+[1] [0] [2] load: maksim.eladio@ldaho.net
+[1] [2] [2] load: null
+[1] [2] [2] TypeError: Cannot read property 'split' of null
+[1] [2] [2]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[1] [2] [2]     at <anonymous>
+[1] [2] [2]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [3] [4] load: blin.zayveon@ldaho.net
+[0] [4] [3] load: dmitri.oluwatomi@ldaho.net
+[0] [1] [0] load: aven.cache@ldaho.net
+[1] [2] [4] load: drax.kaylee@ldaho.net
+[0] [3] [0] load: null
+[0] [3] [0] TypeError: Cannot read property 'split' of null
+[0] [3] [0]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [3] [0]     at <anonymous>
+[0] [3] [0]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [2] [1] load: bexton.brysyn@ldaho.net
+[1] [1] [3] load: emory.dalin@ldaho.net
+[1] [4] [2] load: null
+[1] [4] [2] TypeError: Cannot read property 'split' of null
+[1] [4] [2]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[1] [4] [2]     at <anonymous>
+[1] [4] [2]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [0] [4] load: daylin.lycan@ldaho.net
+[1] [1] [0] load: coltyn.iker@ldaho.net
+[0] [3] [1] load: null
+[0] [3] [1] TypeError: Cannot read property 'split' of null
+[0] [3] [1]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [3] [1]     at <anonymous>
+[0] [3] [1]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [4] [0] load: rhoman.amari@ldaho.net
+[0] [4] [0] load: haddox.davarious@ldaho.net
+[0] [3] [2] account created: tywon.devion@ldaho.net
+[0] [3] [3] account created: briceson.josemanuel@ldaho.net
+[0] [4] [2] load: blayse.kashton@ldaho.net
+[0] [3] [2] start
+[0] [3] [3] start
+[1] [0] [1] account created: diamond.alexey@ldaho.net
+[0] [3] [4] load: phil.grabiel@ldaho.net
+[1] [2] [0] load: jorian.ronan@ldaho.net
+[0] [1] [3] load: null
+[0] [1] [3] TypeError: Cannot read property 'split' of null
+[0] [1] [3]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [1] [3]     at <anonymous>
+[0] [1] [3]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [0] [1] start
+[1] [0] [3] load: null
+[1] [0] [3] TypeError: Cannot read property 'split' of null
+[1] [0] [3]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[1] [0] [3]     at <anonymous>
+[1] [0] [3]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [3] [1] load: seleem.jantzen@ldaho.net
+[0] [2] [1] load: null
+[0] [2] [1] TypeError: Cannot read property 'split' of null
+[0] [2] [1]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [2] [1]     at <anonymous>
+[0] [2] [1]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[0] [1] [1] load: jedidiah.hiroshi@ldaho.net
+[1] [4] [3] load: null
+[1] [4] [3] TypeError: Cannot read property 'split' of null
+[1] [4] [3]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[1] [4] [3]     at <anonymous>
+[1] [4] [3]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[1] [3] [3] account created: kostas.joshuan@ldaho.net
+[0] [2] [0] load: hobie.danger@ldaho.net
+[1] [0] [0] load: null
+[1] [0] [0] TypeError: Cannot read property 'split' of null
+[1] [0] [0]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[1] [0] [0]     at <anonymous>
+[1] [0] [0]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[0] [0] [0] load: null
+[0] [0] [0] TypeError: Cannot read property 'split' of null
+[0] [0] [0]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [0] [0]     at <anonymous>
+[0] [0] [0]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[0] [1] [0] account created: aven.cache@ldaho.net
+[1] [3] [3] start
+[0] [4] [4] load: branko.zadiel@ldaho.net
+[0] [1] [2] account created: clifton.zadiel@ldaho.net
+[0] [0] [4] account created: ded89972@emailna.co
+[0] [1] [0] start
+[0] [1] [2] start
+[0] [1] [4] load: null
+[0] [1] [4] TypeError: Cannot read property 'split' of null
+[0] [1] [4]     at create (C:\Users\Mike\workspace\next-islocat\el.js:220:58)
+[0] [1] [4]     at <anonymous>
+[0] [1] [4]     at process._tickCallback (internal/process/next_tick.js:188:7)
+[0] [0] [2] account created: daryel.srihith@ldaho.net
+[1] [1] [4] load: cale.cade@ldaho.net
+[0] [2] [2] account created: martavion.russel@ldaho.net
+Terminer le programme de commandes (O/N)ÿ? [0] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [4] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [2] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [3] Terminer le programme de commandes (O/N)ï¿½? Error: .wait() for #tokenMicro timed out after 3600000msec
+[0] [0] [3]     at newDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:545:9)
+[0] [0] [3]     at waitDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:599:16)
+[0] [0] [3]     at EventEmitter.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:100:18)
+[0] [0] [3]     at Object.onceWrapper (events.js:315:30)
+[0] [0] [3]     at emitOne (events.js:116:13)
+[0] [0] [3]     at EventEmitter.emit (events.js:211:7)
+[0] [0] [3]     at ChildProcess.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[0] [0] [3]     at emitTwo (events.js:126:13)
+[0] [0] [3]     at ChildProcess.emit (events.js:214:7)
+[0] [0] [3]     at emit (internal/child_process.js:772:12)
+[4] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [1] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [1] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Error: .wait() for #tokenMicro timed out after 3600000msec
+[0] [4] [2]     at newDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:545:9)
+[0] [4] [2]     at waitDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:599:16)
+[0] [4] [2]     at EventEmitter.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:100:18)
+[0] [4] [2]     at Object.onceWrapper (events.js:315:30)
+[0] [4] [2]     at emitOne (events.js:116:13)
+[0] [4] [2]     at EventEmitter.emit (events.js:211:7)
+[0] [4] [2]     at ChildProcess.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[0] [4] [2]     at emitTwo (events.js:126:13)
+[0] [4] [2]     at ChildProcess.emit (events.js:214:7)
+[0] [4] [2]     at emit (internal/child_process.js:772:12)
+[0] [4] [4] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [1] Terminer le programme de commandes (O/N)ï¿½? [2] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [3] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [1] Terminer le programme de commandes (O/N)ï¿½? Error: .wait() for #tokenMicro timed out after 3600000msec
+[1] [2] [4]     at newDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:545:9)
+[1] [2] [4]     at waitDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:599:16)
+[1] [2] [4]     at EventEmitter.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:100:18)
+[1] [2] [4]     at Object.onceWrapper (events.js:315:30)
+[1] [2] [4]     at emitOne (events.js:116:13)
+[1] [2] [4]     at EventEmitter.emit (events.js:211:7)
+[1] [2] [4]     at ChildProcess.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[1] [2] [4]     at emitTwo (events.js:126:13)
+[1] [2] [4]     at ChildProcess.emit (events.js:214:7)
+[1] [2] [4]     at emit (internal/child_process.js:772:12)
+Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [2] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Error: .wait() for #tokenMicro timed out after 3600000msec
+[1] [0] [4]     at newDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:545:9)
+[1] [0] [4]     at waitDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:599:16)
+[1] [0] [4]     at EventEmitter.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:100:18)
+[1] [0] [4]     at Object.onceWrapper (events.js:315:30)
+[1] [0] [4]     at emitOne (events.js:116:13)
+[1] [0] [4]     at EventEmitter.emit (events.js:211:7)
+[1] [0] [4]     at ChildProcess.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[1] [0] [4]     at emitTwo (events.js:126:13)
+[1] [0] [4]     at ChildProcess.emit (events.js:214:7)
+[1] [0] [4]     at emit (internal/child_process.js:772:12)
+[1] [4] [1] Error: .wait() for #tokenMicro timed out after 3600000msec
+[1] [4] [1]     at newDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:545:9)
+[1] [4] [1]     at waitDone (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\actions.js:599:16)
+[1] [4] [1]     at EventEmitter.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:100:18)
+[1] [4] [1]     at Object.onceWrapper (events.js:315:30)
+[1] [4] [1]     at emitOne (events.js:116:13)
+[1] [4] [1]     at EventEmitter.emit (events.js:211:7)
+[1] [4] [1]     at ChildProcess.<anonymous> (C:\Users\Mike\workspace\next-islocat\node_modules\nightmare\lib\ipc.js:49:10)
+[1] [4] [1]     at emitTwo (events.js:126:13)
+[1] [4] [1]     at ChildProcess.emit (events.js:214:7)
+[1] [4] [1]     at emit (internal/child_process.js:772:12)
+Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? [3] Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? Terminer le programme de commandes (O/N)ï¿½? 
+^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C[4] ^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^Cnpm run timeout exited with code 1
+[0] [4] ^C^C^C^C^Cnpm run timeout exited with code 1
+[0] [2] ^C^C^C^C^Cnpm run timeout exited with code 1
+[0] [0] ^C^C^C^C^Cnpm run timeout exited with code 1
+[0] [1] ^C^C^C^C^C^C^C^C^C^C^C^C^Cnpm run timeout exited with code 1
+[1] [4] ^C^C^C^C^Cnpm run timeout exited with code 1
+[1] [1] ^C^C^C^C^Cnpm run timeout exited with code 1
+[1] [2] ^C^C^C^C^Cnpm run timeout exited with code 1
+[0] npm run timeout exited with code 1
+[1] [2] npm run timeout exited with code 1
+[1] [3] [1] npm run timeout exited with code 1
+[0] [3] [1] npm run timeout exited with code 1
+[1] [4] [1] npm run timeout exited with code 1
+[0] [4] [1] npm run timeout exited with code 1
+[0] [2] [1] npm run timeout exited with code 1
+[0] [0] [1] npm run timeout exited with code 1
+[1] [1] [1] npm run timeout exited with code 1
+[1] [0] [1] npm run timeout exited with code 1
+[0] [1] [1] npm run timeout exited with code 1
+[1] [2] [1] npm run timeout exited with code 1
+[1] [3] [2] npm run timeout exited with code 1
+[0] [3] [2] npm run timeout exited with code 1
+[0] [4] [2] npm run timeout exited with code 1
+[0] [2] [4] [2] npm run timeout exited with code 1
+[0] [2] npm run timeout exited with code 1
+[1] [0] [2] npm run timeout exited with code 1
+[0] [0] [2] npm run timeout exited with code 1
+[1] [1] [2] npm run timeout exited with code 1
+[0] [1] [2] npm run timeout exited with code 1
+[1] [2] [2] npm run timeout exited with code 1
+[1] [3] [3] npm run timeout exited with code 1
+[0] [3] [3] npm run timeout exited with code 1
+[0] [4] [4] [3] npm run timeout exited with code 1
+[0] [3] npm run timeout exited with code 1
+[1] [1] [3] npm run timeout exited with code 1
+[0] [2] [3] [3] npm run timeout exited with code 1
+[0] [2] npm run timeout exited with code 1
+[1] [0] [3] npm run timeout exited with code 1
+[1] [3] [4] npm run timeout exited with code 1
+[0] [1] [4] npm run timeout exited with code 1
+[0] [4] [4] [3] npm run timeout exited with code 1
+[0] [4] npm run timeout exited with code 1
+[0] [3] [4] npm run timeout exited with code 1
+[1] [3] npm run start5 exited with code 1
+[1] [2] [4] npm run timeout exited with code 1
+[0] [2] [4] npm run timeout exited with code 1
+[0] [3] npm run start5 exited with code 1
+[0] [1] npm run start5 exited with code 1
+[1] [4] [4] npm run timeout exited with code 1
+[1] [1] [0] [4] npm run timeout exited with code 1
+[1] [4] npm run timeout exited with code 1
+[0] [4] npm run start5 exited with code 1
+[0] [2] npm run start5 exited with code 1
+[1] [4] npm run start5 exited with code 1
+[1] [1] npm run start5 exited with code 1
+[0] [0] npm run start5 exited with code 1
+[0] npm run start25 exited with code 1
+[1] [2] [3] npm run timeout exited with code 1
+[1] [2] npm run start5 exited with code 1
+[1] [0] [4] npm run timeout exited with code 1
+[1] [0] npm run start5 exited with code 1
+[1] npm run start25 exited with code 1

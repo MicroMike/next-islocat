@@ -10,7 +10,8 @@
     "show": "cross-env SHOW=true node el.js",
     "timeout": "node el.js",
     "start5": "concurrently \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\"",
-    "start": "concurrently \"npm run start5\" \"npm run start5\"",
+    "start25": "concurrently \"npm run start5\" \"npm run start5\" \"npm run start5\" \"npm run start5\" \"npm run start5\"",
+    "start": "concurrently \"npm run start25\" \"npm run start25\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

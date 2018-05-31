@@ -91,8 +91,8 @@ const doItAgain = (first) => {
 }
 
 const tempmail = [
-  'https://www.mohmal.com/fr/create/random',
-  'https://www.mohmal.com/fr/create/random',
+  // 'https://www.mohmal.com/fr/create/random',
+  // 'https://www.mohmal.com/fr/create/random',
   'https://www.tempmailaddress.com',
   'https://www.tempmailaddress.com',
   // 'https://www.crazymailing.com',
@@ -243,6 +243,7 @@ const create = async (newAccount) => {
 
       if (emailurl === 'https://www.mohmal.com/fr/create/random') {
         await nightmare
+          .wait(15000)
           .evaluate(() => {
             var id = $('[data-msg-id]').attr('data-msg-id')
             window.location = 'https://www.mohmal.com/fr/message/' + id
