@@ -7,9 +7,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "show": "cross-env SHOW=true node el.js",
-    "timeout": "node el.js",
-    "start5": "concurrently \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\" \"npm run timeout\"",
+    "new": "cross-env NEWACCOUNT=1 node el.js",
+    "log": "cross-env NEWACCOUNT=0 node el.js",
+    "new5": "concurrently \"npm run new\" \"npm run new\" \"npm run new\" \"npm run new\" \"npm run new\"",
+    "log5": "concurrently \"npm run log\" \"npm run log\" \"npm run log\" \"npm run log\" \"npm run log\"",
     "start": "concurrently \"npm run start5\" \"npm run start5\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
