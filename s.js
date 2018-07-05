@@ -105,7 +105,7 @@ const main = async (restart) => {
       //   mode: 'detach'
       // },
       alwaysOnTop: false,
-      waitTimeout: 10000,
+      waitTimeout: 100000,
       show: true,
       typeInterval: 300,
       webPreferences: {
@@ -177,7 +177,7 @@ const main = async (restart) => {
         .type(inputs.username, login)
         .type(inputs.password, pass)
         .click(loginBtn)
-        .wait(4000 + rand(2000))
+        .wait(30000 + rand(2000))
         // .goto(nAl)
         .goto('https://www.spotify.com/account/overview/')
         .wait(4000 + rand(2000))
